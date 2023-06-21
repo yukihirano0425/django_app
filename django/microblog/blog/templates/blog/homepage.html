@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+{% for post in posts %}
+<div class = "post block">
+    <h2 class = "subtitle">{{post.title}}</h2>
+    <h3>{{post.intro}}</h3>
+    <small>{{post.created_at}}</small>
+    <p>{{post.body}}</p>
+    <a href = "{% url "post_detail" post.slug %}">もっと読む</a>
+</div>
+{% endfor %}
+{% endblock %}

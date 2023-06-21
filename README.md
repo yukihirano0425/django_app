@@ -11,3 +11,7 @@ pip install -r requirements.txt
 
 # start app
 python manage.py runserver
+
+# create data_table
+cd ./django_app/django/microblog python manage.py makemigrations
+python manage.py migrate
